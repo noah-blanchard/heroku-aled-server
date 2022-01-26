@@ -175,7 +175,7 @@ exports.authUser = (req, res) => {
                         })
                     } else {
                         const user = result[0];
-                        user.token = security.get_token(user)
+                        //user.token = security.get_token(user)
                         res.json(user);
                     }
                 });

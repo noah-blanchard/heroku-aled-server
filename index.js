@@ -19,6 +19,12 @@ const markRoutes = require('./routes/mark');
 const convRoutes = require("./routes/conversation");
 const eventRoutes = require("./routes/calendar");
 
+const db = require("./config/db.js");
+
+setInterval(() => { 
+    db.query("select 1");
+}, 5000);
+
 
 
 // Socket IO

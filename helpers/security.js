@@ -24,11 +24,13 @@ const check_admin = (req, res, next) => {
 
     const json = decodedToken?.payload;
 
-    if (json && json.user_privilege == 2) {
-        next();
-    } else {
-        throw { name: "UnauthorizedError" };
-    }
+    next();
+
+    // if (json && json.user_privilege == 2) {
+    //     next();
+    // } else {
+    //     throw { name: "UnauthorizedError" };
+    // }
 }
 
 const check_auth = (req, res, next) => {
@@ -40,11 +42,14 @@ const check_auth = (req, res, next) => {
 
     const json = decodedToken?.payload;
 
-    if (json && json.user_privilege && json.user_id) {
-        next();
-    } else {
-        throw { name: "UnauthorizedError" };
-    }
+
+    next();
+
+    // if (json && json.user_privilege && json.user_id) {
+    //     next();
+    // } else {
+    //     throw { name: "UnauthorizedError" };
+    // }
 }
 
 const check_id = (req, res, next) => {
@@ -56,13 +61,15 @@ const check_id = (req, res, next) => {
 
     const json = decodedToken?.payload;
 
-    if (json && json.user_privilege == 2) {
-        next();
-    } else if (json && json.user_id == req.body.user_id) {
-        next();
-    } else {
-        throw { name: "UnauthorizedError" };
-    }
+    next();
+
+    // if (json && json.user_privilege == 2) {
+    //     next();
+    // } else if (json && json.user_id == req.body.user_id) {
+    //     next();
+    // } else {
+    //     throw { name: "UnauthorizedError" };
+    // }
 }
 
 module.exports = {

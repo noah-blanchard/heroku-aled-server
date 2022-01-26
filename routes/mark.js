@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const ctrl = require("../controllers/mark");
 
+router.use(cors({origin: '*'}));
 router.use(express.json());
 
 router.get("/user/:id", ctrl.getAll);

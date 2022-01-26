@@ -3,6 +3,7 @@ const router = express.Router();
 const topicCtrl = require("../controllers/topic")
 const bodyParser = require('body-parser')
 
+router.use(cors({origin: '*'}));
 router.use(express.json());
 
 router.get("/", topicCtrl.getAllTopics);

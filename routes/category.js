@@ -5,6 +5,8 @@ const security = require('../helpers/security')
 
 router.use(express.json());
 
+router.use(cors({origin: '*'}));
+
 router.get("/", ctrl.getAll);
 router.post("/", security.check_admin, ctrl.post);
 router.delete("/", security.check_admin, ctrl.delete);

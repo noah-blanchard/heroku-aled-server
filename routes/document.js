@@ -6,6 +6,8 @@ const security = require('../helpers/security')
 
 router.use(bodyParser.json());
 
+router.use(cors({origin: '*'}));
+
 router.get("/", documentCtrl.getAllDocuments);
 
 router.post("/", security.check_auth, documentCtrl.postDocument);

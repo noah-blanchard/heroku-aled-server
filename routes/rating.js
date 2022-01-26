@@ -3,6 +3,7 @@ const router = express.Router();
 const markCtrl = require("../controllers/rating")
 const bodyParser = require('body-parser')
 
+router.use(cors({origin: '*'}));
 router.use(bodyParser.json());
 
 router.get("/", markCtrl.getAllMarks);

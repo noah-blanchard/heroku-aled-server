@@ -6,6 +6,7 @@ const security = require('../helpers/security')
 const errorHandler = require('../helpers/error-handler');
 router.use(errorHandler);
 router.use(express.json());
+router.use(cors({origin: '*'}));
 
 
 router.get("/", ctrl.getAllUsers);

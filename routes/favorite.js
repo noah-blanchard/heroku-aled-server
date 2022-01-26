@@ -3,6 +3,7 @@ const router = express.Router();
 const favoriteCtrl = require("../controllers/favorite")
 const security = require('../helpers/security')
 
+router.use(cors({origin: '*'}));
 router.use(express.json());
 
 router.get("/", favoriteCtrl.getAllFavorite);

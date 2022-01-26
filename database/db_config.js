@@ -1,10 +1,12 @@
 const dbConfig = {
-    HOST: "127.0.0.1",
-    USER: "root",
-    PASSWORD: "root",
-    DB: "ptut_test",
+    HOST: "eu-cdbr-west-02.cleardb.net",
+    USER: "b929adf5a3b088",
+    PASSWORD: "589bf3b0",
+    DB: "heroku_49ac8f8ba47175",
     PORT: "3306"
 };
+
+//mysql://b929adf5a3b088:589bf3b0@eu-cdbr-west-02.cleardb.net/heroku_49ac8f8ba47175f?reconnect=true
 
 /*
 const dbConfig = {

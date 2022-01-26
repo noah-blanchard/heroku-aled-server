@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require("cors");
 const router = express.Router();
 const ctrl = require("../controllers/user")
 const security = require('../helpers/security')

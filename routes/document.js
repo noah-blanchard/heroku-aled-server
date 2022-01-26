@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const cors = require("cors");
 const documentCtrl = require("../controllers/document")
 const bodyParser = require('body-parser')
 const security = require('../helpers/security')

@@ -4,7 +4,8 @@ const cors = require("cors");
 const markCtrl = require("../controllers/rating")
 const bodyParser = require('body-parser')
 
-router.use(cors({origin: '*'}));
+router.use(cors());
+
 router.use(bodyParser.json());
 
 router.get("/", markCtrl.getAllMarks);

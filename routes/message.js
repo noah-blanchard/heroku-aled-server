@@ -3,7 +3,8 @@ const router = express.Router();
 const cors = require("cors");
 const messageCtrl = require("../controllers/message")
 
-router.use(cors({origin: '*'}));
+router.use(cors());
+
 router.use(express.json({limit: '50mb'}));
 router.use(express.urlencoded({limit: '50mb', extended: true}));
 

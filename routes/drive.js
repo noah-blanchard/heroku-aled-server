@@ -8,7 +8,8 @@ const bodyParser = require('body-parser')
 const { Duplex } = require('stream'); // Native Node Module 
 
 router.use(bodyParser.json());
-router.use(cors({origin: '*'}));
+router.use(cors());
+
 
 /* ------------------------------------------ */
 

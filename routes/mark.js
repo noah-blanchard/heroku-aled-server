@@ -3,7 +3,8 @@ const router = express.Router();
 const cors = require("cors");
 const ctrl = require("../controllers/mark");
 
-router.use(cors({origin: '*'}));
+router.use(cors());
+
 router.use(express.json());
 
 router.get("/user/:id", ctrl.getAll);

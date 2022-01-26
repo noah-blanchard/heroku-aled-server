@@ -6,8 +6,8 @@ const bodyParser = require('body-parser')
 const security = require('../helpers/security')
 
 router.use(bodyParser.json());
+router.use(cors());
 
-router.use(cors({origin: '*'}));
 
 router.get("/", documentCtrl.getAllDocuments);
 
